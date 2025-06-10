@@ -1,4 +1,4 @@
-# Web Development Project 1 - *Community Board*
+# Web Development Project 1 - *Board*
 
 Submitted by: **Justin**
 
