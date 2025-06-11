@@ -5,7 +5,7 @@ import './index.css'
 function App() {
     return (
         <div className="app">
-            <h1>
+            <h1 className="main-title">
                 <span>Computer</span>
                 <span>Science</span>
                 <span>Learning Hub</span>

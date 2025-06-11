@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap');
+
+:root {
+  --clr-bg: #ececec;
+  --clr-card-bg: #1e1e1e;
+  --clr-txt-light: #ececec;
+  --clr-txt-dark: #1e1e1e;
+
+  --clr-accent: #8f69ff;
+  --clr-accent-light: #00ffaa;
+
+  --clr-lvl-green: #00ff88;
+  --clr-lvl-yellow: #ffe100;
+  --clr-lvl-red: #ff5f5f;
+
+  --fnt-primary: 'Sora', sans-serif;
+  --fnt-secondary: 'Montserrat', sans-serif;
+
+  --max-width: 1600px;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100%;
+  background-color: var(--clr-bg);
+  font-family: var(--fnt-primary);
+  overflow-x: hidden;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+.main-title {
+  border-left: 6px solid var(--clr-accent);
+  font-family: var(--fnt-secondary);
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 0.7;
+  margin-bottom: 2rem;
+  margin-top: 15rem;
+
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1.5rem;
+}
+
+.main-title span {
+  display: block;
+  padding-left: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 3rem;
+  padding: 4rem 2rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.card {
+  background-color: var(--clr-card-bg);
+  border-radius: 3.5rem;
+  padding: 1.5rem;
+  overflow: hidden;
+  color: var(--clr-txt-light);
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 500px;
+  justify-content: flex-end;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 2rem;
+  filter: blur(3px) brightness(0.5);
+  z-index: 1;
+}
+
+.card h3 {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  z-index: 2;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 2.4rem;
+  max-width: 80%;
+  border-left: 2px solid var(--clr-accent-light);
+  padding-left: 1rem;
+}
+
+.card p {
+  margin-top: auto;
+  margin-bottom: 1.5rem;
+  z-index: 2;
+  position: relative;
+  padding: 0 0.5rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.card .info {
+  display: flex;
+  gap: 1rem;
+  padding: 0 0.5rem;
+  margin-bottom: 1rem;
+  z-index: 2;
+  position: relative;
+}
+
+.card .info span {
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.level.green {
+  background-color: var(--clr-lvl-green);
+  color: var(--clr-txt-dark);
+}
+.level.yellow {
+  background-color: var(--clr-lvl-yellow);
+  color: var(--clr-txt-dark);
+}
+.level.red {
+  background-color: var(--clr-lvl-red);
+  color: var(--clr-txt-dark);
+}
+
+.duration {
+  background-color: var(--clr-accent);
+  color: var(--clr-txt-light);
+}
+
+.card button {
+  background-color: var(--clr-txt-light);
+  color: var(--clr-txt-dark);
+  font-weight: 600;
+  padding: 0.6rem 0;
+  border: none;
+  border-radius: 999px;
+  margin: 0.5rem;
+  cursor: pointer;
+  z-index: 2;
+  position: relative;
+  transition: 0.5s ease;
+}
+
+.card button:hover {
+  background-color: var(--clr-accent-light);
+}
